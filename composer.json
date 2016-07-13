@@ -1,0 +1,11 @@
+{
+    "name": "atua/exemplo-doctrine",
+    "require": {
+        "doctrine/orm": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Projeto\\": "src/Projeto"
+        }
+    }
+}
