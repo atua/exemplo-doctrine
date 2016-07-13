@@ -26,5 +26,6 @@
     
 ## Criando models com doctrine
 
+    rm -rf src/*
     vendor/bin/doctrine orm:convert-mapping --force --from-database --namespace="Projeto\\BD\\" annotation src
     ./composer.phar dumpautoload -o
