@@ -20,21 +20,21 @@ class Teste
      * @ORM\GeneratedValue(strategy="SEQUENCE")
      * @ORM\SequenceGenerator(sequenceName="teste_cd_teste_seq", allocationSize=1, initialValue=1)
      */
-    private $cdTeste;
+    public $cdTeste;
 
     /**
      * @var string
      *
      * @ORM\Column(name="nm_teste", type="text", nullable=false)
      */
-    private $nmTeste;
+    public $nmTeste;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\ManyToMany(targetEntity="Projeto\BD\Grupo", mappedBy="cdTeste")
      */
-    private $cdGrupo;
+    public $cdGrupo;
 
     /**
      * Constructor

@@ -23,9 +23,14 @@
     ALTER TABLE grupo_teste ADD CONSTRAINT pk_grupo_teste PRIMARY KEY (cd_grupo, cd_teste);
     ALTER TABLE grupo_teste ADD CONSTRAINT fk_grupo FOREIGN KEY (cd_grupo) REFERENCES grupo(cd_grupo);
     ALTER TABLE grupo_teste ADD CONSTRAINT fk_teste FOREIGN KEY (cd_teste) REFERENCES teste(cd_teste);
-    
-## Criando models com doctrine
+     
+    CREATE TABLE pessoa (cd_pessoa SERIAL PRIMARY KEY, nm_pessoa TEXT NOT NULL, dt_nascimento DATE, cd_grupo INTEGER);
+    ALTER TABLE pessoa ADD CONSTRAINT fk_grupo FOREIGN KEY (cd_grupo) REFERENCES grupo(cd_grupo);
 
-    rm -rf src/*
-    vendor/bin/doctrine orm:convert-mapping --force --from-database --namespace="Projeto\\BD\\" annotation src
-    ./composer.phar dumpautoload -o
+## Criando entities com doctrine
+
+    php gerador_classes.php
+
+## Utilizando entities
+
+    php exemplos.php

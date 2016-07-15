@@ -20,14 +20,14 @@ class Grupo
      * @ORM\GeneratedValue(strategy="SEQUENCE")
      * @ORM\SequenceGenerator(sequenceName="grupo_cd_grupo_seq", allocationSize=1, initialValue=1)
      */
-    private $cdGrupo;
+    public $cdGrupo;
 
     /**
      * @var string
      *
      * @ORM\Column(name="nm_grupo", type="text", nullable=false)
      */
-    private $nmGrupo;
+    public $nmGrupo;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -42,7 +42,7 @@ class Grupo
      *   }
      * )
      */
-    private $cdTeste;
+    public $cdTeste;
 
     /**
      * Constructor
